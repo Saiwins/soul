@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities Page</title>
+    <link rel="stylesheet" href="cities.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select State and City</h2>
+        <form id="citiesForm">
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <!-- States will be populated dynamically from the API -->
+            </select><br>
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <!-- Cities will be populated dynamically based on selected state -->
+            </select><br>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+
+    <script src="cities.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stateSelect = document.getElementById('state');
+            const citySelect = document.getElementById('city');
+            const form = document.getElementById('citiesForm');
+            const apiUrl = 'YOUR_API_ENDPOINT'; // Replace with your API endpoint
+
+            // Fetch states for India
+            fetch(apiUrl + '/states')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(state => {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.textContent = state;
+                    stateSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching states:', error));
+
+            // When a state is selected, fetch cities for that state
+            stateSelect.addEventListener('change', function() {
+                const selectedState = stateSelect.value;
+                citySelect.innerHTML = '<option value="">Select a city</option>'; // Clear city options
+                if (selectedState) {
+                    fetch(apiUrl + '/cities/' + selectedState)
+                    .then(response => response.json())
+                    .then(data => {
+                        data.forEach(city => {
+                            const option = document.createElement('option');
+                            option.value = city;
+                            option.textContent = city;
+                            citySelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching cities:', error));
+                }
+            });
+
+            // Function to redirect to hotel_address.html
+            function redirectToHotelAddressPage(event) {
+                event.preventDefault(); // Prevent form submission
+                window.location.href = 'hotel_addresses.html';
+            }
+
+            // Event listener for form submission
+            form.addEventListener('submit', redirectToHotelAddressPage);
+        });
+    </script>
+</body>
+</html>

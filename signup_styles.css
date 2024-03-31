@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://mim.p7s1.io/pis/ld/f4efzChLCVyZ-c1vEwXZAanB-DJ78rnq2V2gRWTHzVV6NywNWMSJCEGmZ4YSENP-WRL0b9lo2z78GmGphRwkM8JK_h7vBnh77l0F2KVRhzEK_LJCFP-crhXEXHaInqbbRe0Ap2uU-6c/profile:original?rect=0%2C314%2C6000%2C3375&w=1070');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form select,
+.form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+.form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #45a049;
+}

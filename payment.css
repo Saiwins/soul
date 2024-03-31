@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Set your desired background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://mim.p7s1.io/pis/ld/f4efzChLCVyZ-c1vEwXZAanB-DJ78rnq2V2gRWTHzVV6NywNWMSJCEGmZ4YSENP-WRL0b9lo2z78GmGphRwkM8JK_h7vBnh77l0F2KVRhzEK_LJCFP-crhXEXHaInqbbRe0Ap2uU-6c/profile:original?rect=0%2C314%2C6000%2C3375&w=1070');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 400px; /* Adjust the width as needed */
+    padding: 40px; /* Increase padding for more space inside the box */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Increase border radius for rounded corners */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.container h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.container form {
+    margin-top: 20px;
+    width: 100%; /* Ensure form takes up full width */
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container button.small {
+    width: calc(50% - 5px);
+}
+
+.container button.small:last-child {
+    margin-left: 10px; /* Adjust margin to create space between buttons */
+}
+
+
+.container button.phonepe {
+    background-image: url('https://static.tnn.in/thumb/msid-97318567,updatedat-1674651749498,width-1280,height-720,resizemode-75/97318567.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Adjusted to cover */
+    padding: 10px 20px; /* Adjust padding as needed */
+    height: 40px;
+}
+
+
+.container button.gpay {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIdf9My8JdlGSVjwX5xVaGBI-j7lehCnzcPA&usqp=CAU');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Adjusted to fit within the button */
+    padding: 10px 20px; /* Adjust padding as needed */
+    height: 40px; /* Adjust height as needed */
+    text-indent: 10px; /* Add some space for text */
+}
+
+
+
+
+

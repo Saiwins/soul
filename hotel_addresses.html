@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Addresses Page</title>
+    <link rel="stylesheet" type="text/css" href="hotel.css">
+    <script src="hotel_addresses.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Hotel Addresses</h2>
+        <p>Select a hotel:</p>
+        <ul id="hotelList">
+            <!-- Hotel addresses will be dynamically populated here -->
+            <li>Hotel 1 Address</li>
+            <li>Hotel 2 Address</li>
+            <!-- Add more hotels as needed -->
+        </ul>
+        <form id="hotelForm">
+            <label for="hotel">Select Hotel:</label>
+            <select id="hotel" name="hotel">
+                <!-- Options will be dynamically populated here -->
+                <option value="hotel1">Hotel 1</option>
+                <option value="hotel2">Hotel 2</option>
+                <!-- Add more options as needed -->
+            </select><br>
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+</body>
+</html>
